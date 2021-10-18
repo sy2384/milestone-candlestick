@@ -1,3 +1,7 @@
+# Milestone Project
+- Use Plotly for stock price candlestick plots
+- Data from Alpha Vantage
+
 # Streamlit on Heroku
 
 This project is intended to help you tie together some important concepts and
