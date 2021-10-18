@@ -10,6 +10,7 @@ from math import pi
 # from bokeh.io import output_notebook
 # import plotly.figure_factory as ff
 import plotly.graph_objects as go
+from dotenv import load_dotenv
 
 
 
@@ -37,7 +38,7 @@ ticker = st.sidebar.text_input('Enter Ticker: ', 'AAPL')
 st.title(f'Ticker: {ticker.upper()}')
 
 # Well, plotly works!
-apikey = 'TAQKWLNW3GEANUR9'
+apikey = load_dotenv('ALPHA_VANTAGE_APIKEY')
 
 url = f'https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol={ticker.upper()}&outputsize=compact&apikey={apikey}'
 r = requests.get(url)
